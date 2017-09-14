@@ -50,11 +50,14 @@
     
     .jumbotron {
         margin: 10px;
+        margin-right: 350px;
+        margin-left: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: row;
     }
-    
-    #charact-image {
-        background-image: url("../assets/danny.png");
+
+    .name-charact {
+        text-align: center;
     }
