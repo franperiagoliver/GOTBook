@@ -1,21 +1,21 @@
 <div class="list-messages-container">
-  <h1>My crown's messages</h1>
-  <ul class="msg-charact">
-    <li *ngFor"let messageCharact for messagesCharact">
-      <div class="avatar-msg-dates">
-      <p>{{charact.name}} {{charact.surname}}</p>
-      <p>{{messageCharact.date}}</p>
-      <p>{{charact.house}}</p>
-      </div>
-      <div>
-        <img [src]="{{charact.picture}}" alt="Character picture"/>
-        <p>{{messageCharact.text}}</p>
-      </div>
-      <div>
-        <img (click)="setStateCool(messageCharact)" src="" alt="Cool!"/>
-        <img (click)="setStatePssst(messageCharact)" src="" alt="Pssst!"/>
-        <img (click)="setStateDie(messageCharact)" src="" alt="You must die!"/>
-      </div>
-    </li>
-  </ul>
+    <h1>My crown's messages</h1>
+    <ul class="msg-charact">
+        <li *ngFor "let message for messagesCharacter">
+            <div class="avatar-msg-dates">
+                <p>{{character.name}} {{character.surname}}</p>
+                <p>{{message.date}}</p>
+                <p>{{character.house}}</p>
+            </div>
+            <div>
+                <img [src]="{{character.picture}}" alt="Character picture" />
+                <p>{{message.text}}</p>
+            </div>
+            <div>
+                <img (click)="setStateCool(message)" src="" alt="Cool!" />
+                <img (click)="setStatePssst(message)" src="" alt="Pssst!" />
+                <img (click)="setStateDie(message)" src="" alt="You must die!" />
+            </div>
+        </li>
+    </ul>
 </div>

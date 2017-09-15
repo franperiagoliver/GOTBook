@@ -1,4 +1,4 @@
-import { House } from "./houses.enum";
+import { House } from './houses.enum';
 
 export class Character {
     id: number;

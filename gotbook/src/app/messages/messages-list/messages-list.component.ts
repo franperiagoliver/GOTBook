@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Message } from "./message/message.model";
-import { MessagesService } from "../messages.service";
-import { Character } from "../../things/charact-dates/charact.model";
-import { MessageState } from "./message/message-states.enum";
+import { Message } from './message/message.model';
+import { MessagesService } from '../messages.service';
+import { Character } from '../../things/charact-dates/charact.model';
+import { MessageState } from './message/message-states.enum';
 
 @Component({
   selector: 'app-messages-list',
@@ -11,23 +11,23 @@ import { MessageState } from "./message/message-states.enum";
 })
 export class MessagesListComponent implements OnInit {
 
-  messagesCharact: Message[];
+  messagesCharacter: Message[];
   message: Message;
-  charact: Character;
+  character: Character;
 
   constructor(private messagesService: MessagesService) {}
 
   ngOnInit() {
-    this.messagesService.getMessageByCharact(this.charact)
-    .subscribe(messagesByCharact => this.messagesCharact = messagesByCharact);
+    this.messagesService.getAllMessages()
+    .subscribe(messagesByCharact => this.messagesCharacter = messagesByCharact);
   }
 
-  setStateCool(messageCharact: Message){
+  setStateCool(messageCharact: Message) {
     messageCharact.state = MessageState.COOL;
     this.messagesService.updateStateMessage(messageCharact).subscribe();
   }
 
-  setStatePssst(messageCharact: Message){
+  setStatePssst(messageCharact: Message) {
     messageCharact.state = MessageState.PSSST;
     this.messagesService.updateStateMessage(messageCharact).subscribe();
   }
