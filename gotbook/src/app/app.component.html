@@ -1,3 +1,5 @@
+ <!-- app-routes -->
+ <router-outlet></router-outlet>
 <!-- Header and nav-->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -6,22 +8,23 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#stories">My stories</a></li>
-                <li><a href="#things">My things</a></li>
-                <li><a href="#partners">My partners</a></li>
-                <li><a href="#events">My events</a></li>
+                <li><a routerLink="/messages" routerLinkActive="active">My crow's messages</a></li>
+                <li><a href="/things">My things</a></li>
+                <li><a href="/partners">My partners</a></li>
+                <li><a href="/events">My events</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="image">
+<div class="back-image">
 </div>
 <!-- Jumbotron -->
-    <div class="jumbotron">
-        <div class="name-charact">
-            <h1>Daenerys Targaryen</h1>
-        </div>
+    <div class="avatar">
+        <h1>Daenerys Targaryen</h1>
+        <img src="../assets/danny.png" alt="Avatar Image"/>
     </div>
+<!-- app-routes -->
+<router-outlet></router-outlet>
 <!-- Footer -->
 <footer class="text-center">
     <p>Copyleft The High Sparrow - 2017 - GOTBook - Chat when winter is comming</p>
