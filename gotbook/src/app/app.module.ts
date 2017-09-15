@@ -7,16 +7,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SearchPartnerPipe } from './custom-pipes/search-partner.pipe';
 import { MessagesComponent } from './messages/messages.component';
-import { ListMessagesComponent } from './messages/list-messages/list-messages.component';
-import { MessageComponent } from './messages/list-messages/message/message.component';
 import { ThingsComponent } from './things/things.component';
 import { CharactDatesComponent } from './things/charact-dates/charact-dates.component';
 import { PartnersComponent } from './partners/partners.component';
 import { PartnersListComponent } from './partners/partners-list/partners-list.component';
 import { PartnerComponent } from './partners/partner/partner.component';
 import { EventsComponent } from './events/events.component';
-
-
+import { MessagesService } from "./messages/messages.service";
+import { MessagesListComponent } from "./messages/messages-list/messages-list.component";
+import { MessageComponent } from "./messages/messages-list/message/message.component";
 const appRoutes: Routes = [
   {path: 'messages', component: MessagesComponent, pathMatch: 'full'},
   {path: 'things', component: ThingsComponent},
@@ -27,13 +26,12 @@ const appRoutes: Routes = [
   pathMatch: 'full'
 }
 ];
-
 @NgModule({
   declarations: [
     AppComponent,
     SearchPartnerPipe,
     MessagesComponent,
-    ListMessagesComponent,
+    MessagesListComponent,
     MessageComponent,
     ThingsComponent,
     CharactDatesComponent,
@@ -51,7 +49,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     HttpModule,
-    FormsModule
+    FormsModule,
+    MessagesService
   ],
   bootstrap: [AppComponent]
 })

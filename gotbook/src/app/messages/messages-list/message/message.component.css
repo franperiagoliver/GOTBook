@@ -1,0 +1,33 @@
+.messages-container {
+    margin-top: 30px;
+    margin-left: 230px;
+    margin-right: 230px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+textarea {
+    max-height:100px;
+    max-width: 800px;
+  }
+  
+.noresize {
+    resize: none; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container h1 {
+    padding-top:15px;
+    padding-left: 10px;
+}
+
+.btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 120px;
+}

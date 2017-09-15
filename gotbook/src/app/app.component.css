@@ -48,14 +48,6 @@
         background-position: center;
     }
     
-    .jumbotron {
-        margin: 10px;
-        margin-right: 350px;
-        margin-left: 350px;
-        
-        flex-direction: row;
-    }
-
     .avatar img {
         border-radius: 50px;
         width: 25%;
@@ -63,7 +55,7 @@
     }
 
     .avatar h1 {
-        font-size: 60px;
+        font-size: 50px;
         display: block;
         text-align: center;
     }
@@ -77,5 +69,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-right: 60px;
     }
 
